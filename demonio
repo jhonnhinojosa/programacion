@@ -1,0 +1,27 @@
+// repetir.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+void main()
+{
+	int i,n;
+	cout<<"introducir numero: ";
+	cin>>n;
+	for (i=1;i<=n;i=i+2)
+		cout<<i<<"\t";
+    i=2;
+	cout<<"\n";
+	while (i<=n)
+	{
+		cout<<i<<"\t";
+		i=i+2;
+	}
+	getch();
+}
+
+
