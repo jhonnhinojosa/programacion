@@ -1,0 +1,80 @@
+Salario con funciones
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+float calcular_salario_neto(float salario_bruto,float afp, float iva);
+
+void main ()
+
+
+{
+	float salario_bruto,afp,iva,salario_neto;
+	cout<<"ingresar el salario bruto: ";
+	cin>>salario_bruto;
+	afp=0.12;
+	iva=0.13;
+	salario_neto= calcular_salario_neto(salario_bruto,afp,iva);
+	cout<<"el salario neto es: "<<salario_neto;
+	getch();
+}
+float calcular_salario_neto(float salario_bruto,float afp, float iva)
+{
+	float salario_neto;
+	salario_neto=salario_bruto-(afp + iva)*salario_bruto;
+	return salario_neto;
+}
+
+
+
+
+
+
+
+
+Ejercicio 5 practico función
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+float sistema_x(float a,float b, float c, float d, float e, float f);
+float sistema_y(float a,float b, float c, float d, float e, float f);
+
+void main ()
+{
+	float a,b,c,d,e,f,x,y;
+	cout<<"a: ";
+	cin>>a;
+	cout<<"b: ";
+	cin>>b;
+	cout<<"c: ";
+	cin>>c;
+	cout<<"d: ";
+	cin>>d;
+	cout<<"e: ";
+	cin>>e;
+	cout<<"f: ";
+	cin>>f;
+	x= sistema_x(a,b,c,d,e,f);
+	y= sistema_y(a,b,c,d,e,f);
+	cout<<"valor para x: "<<x<<"\n";
+	cout<<"valor para y: "<<y;
+	getch();
+}
+ float sistema_x(float a,float b, float c, float d, float e, float f)
+ {
+	 float x;
+	 x=(e*c-b*f)/(b*d-e*a);
+	 return x;
+ }
+float sistema_y(float a,float b, float c, float d, float e, float f)
+{
+	float y;
+	y=(c*d-a*f)/(a*e-b*d);
+	return y;
+}
