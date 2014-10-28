@@ -1,0 +1,63 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#include "stdlib.h"
+
+
+using namespace std;
+void main()
+
+{
+	int opcion,s,n,i,h,b;
+	float A,r;
+	do
+	{
+	  cout<<"\t MENU"<<"\n";
+	  cout<<"1.serie numero par\n";
+	  cout<<"2.area de circunferencia\n";
+	  cout<<"3.area de triangulo\n";
+	  cout<<"elegir opcion:";
+	  cin>>opcion;
+	  switch(opcion)
+	  {
+	  case 1: cout<<"escribir numero: ";
+		      cin>>n;
+			  s=0;
+			  for(i=2;i<=n;i=i+2)
+				  s=s+i;
+			  cout<<"escribir suma: "<<s;
+			  getch();
+			  break;
+	  case 2: cout<<"escribir radio: ";
+		      cin>>r;
+			  A=3.14*r*r;
+			  cout<<"el area es: "<<A;
+			  getch();
+			  break;
+	  case 3: cout<<"escribir altura: ";
+		      cin>>h;
+			  cout<<"escribir base: ";
+			  cin>>b;
+			  if(b>0&&h>0)
+			  {
+				  A=(b*h)/2;
+			      cout<<"el area es: "<<A;
+			  }
+			  else
+				  cout<<"error";
+			  getch();
+			  break;
+	  case 4: cout<<"salir";
+		      break;
+	  default:cout<<"error";
+	  }
+	  system ("cls");
+	}
+	while(opcion!=4);
+	getch();
+}
+
+
+
+
